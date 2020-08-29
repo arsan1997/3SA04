@@ -31,7 +31,7 @@ export default function Weather(props) {
         <ImageBackground source={require('../awe.jpg')} style={styles.backdrop}>
             <View style={styles.pett}>
                 <Text style={styles.sizeText}>Zip Code</Text>
-                <Text>{props.zipCode}</Text>
+                <Text style={styles.sizenumber}>{props.zipCode}</Text>
                 <Forecast {...forecastInfo} />
             </View>
         </ImageBackground>
@@ -68,5 +68,8 @@ const styles = StyleSheet.create({
  },
  sizeText: {
     fontSize:'30px'
+ },
+ sizenumber: {
+    fontSize:'25px'
  }
 });

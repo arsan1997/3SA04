@@ -2,13 +2,13 @@ import React from 'react';
 import { Text, View,StyleSheet } from 'react-native';
 export default function Forcast(props) {
     return (
-        <View >
+        <View>
         <Text style={styles.temp}>{props.main}</Text>
          <Text style={styles.temp}>{props.description}</Text>
         <View>
-    <Text>{props.temp}</Text>
-    <Text>°C</Text>
-    </View>
+            <Text style={styles.temp}>{props.temp}°C</Text>
+            
+        </View>
     </View>
     );
    }

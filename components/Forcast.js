@@ -14,6 +14,11 @@ export default function Forcast(props) {
    }
    const styles = StyleSheet.create({
     temp: {
-        fontSize:'25px'
+        fontSize:'25px',
+        fontWeight: 'bold',
+        color: 'gray',
+        textShadowOffset: { width: 1, height: 2 },
+         textShadowColor: '#000',
+
     },
 })

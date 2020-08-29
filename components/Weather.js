@@ -67,9 +67,19 @@ const styles = StyleSheet.create({
      
  },
  sizeText: {
-    fontSize:'30px'
+    fontSize:'30px',
+    fontWeight: 'bold',
+    color: '#f5f5f5',
+    textShadowOffset: { width: 1, height: 2 },
+    textShadowRadius: 1,
+    textShadowColor: '#000',
+    
  },
  sizenumber: {
-    fontSize:'25px'
+    fontSize:'25px',
+    color: '#f5f5f5',
+    textShadowOffset: { width: 1, height: 2 },
+    textShadowColor: '#000',
+
  }
 });

@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import Forecast from './Forcast';
 import { StyleSheet, Text, View ,ImageBackground } from 'react-native';
+import { max } from 'lodash';
 export default function Weather(props) {
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
@@ -29,7 +30,7 @@ export default function Weather(props) {
         <View style={styles.sett}>
         <ImageBackground source={require('../awe.jpg')} style={styles.backdrop}>
             <View style={styles.pett}>
-                <Text>Zip Code</Text>
+                <Text style={styles.sizeText}>Zip Code</Text>
                 <Text>{props.zipCode}</Text>
                 <Forecast {...forecastInfo} />
             </View>
@@ -47,7 +48,9 @@ const styles = StyleSheet.create({
  },
  sett: {
     width: '100%',
-    height: '100%'
+    height: '100%',
+    maxHeight:'100vh'
+    
  },
  pett: {
     width: '100%',
@@ -58,7 +61,12 @@ const styles = StyleSheet.create({
      justifyContent: 'center',
 
      alignItems: 'center',
-
-     //backgroundColor:'black', 
+    
+     textAlign:'center'
+     
+     
+ },
+ sizeText: {
+    fontSize:'30px'
  }
 });

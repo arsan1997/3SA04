@@ -1,10 +1,10 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View,StyleSheet } from 'react-native';
 export default function Forcast(props) {
     return (
         <View >
-        <Text>{props.main}</Text>
-         <Text>{props.description}</Text>
+        <Text style={styles.temp}>{props.main}</Text>
+         <Text style={styles.temp}>{props.description}</Text>
         <View>
     <Text>{props.temp}</Text>
     <Text>°C</Text>
@@ -12,4 +12,8 @@ export default function Forcast(props) {
     </View>
     );
    }
-   
+   const styles = StyleSheet.create({
+    temp: {
+        fontSize:'25px'
+    },
+})
